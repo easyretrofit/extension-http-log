@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.easyretrofit</groupId>
+        <artifactId>extension-http-log</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>extension-http-log-spring-boot-starter</artifactId>
+    <name>extension-http-log-spring-boot-starter</name>
+    <description>extension-http-log-spring-boot-starter</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.boot.version>2.0.0.RELEASE</spring.boot.version>
+        <easyretrofit.spring.version>1.3.1</easyretrofit.spring.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.easyretrofit</groupId>
+            <artifactId>extension-http-log-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.easyretrofit</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${easyretrofit.spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
