@@ -12,7 +12,7 @@
 
     <artifactId>extension-http-log</artifactId>
     <name>extension-http-log</name>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <description>
         the parent pom.xml of easy-retrofit-extension-http-log
     </description>
