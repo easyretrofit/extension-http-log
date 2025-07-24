@@ -2,7 +2,7 @@ package io.github.easyretrofit.extension.httplog.core.interceptor;
 
 import io.github.easyretrofit.core.RetrofitResourceContext;
 import io.github.easyretrofit.core.extension.BaseInterceptor;
-import io.github.easyretrofit.extension.httplog.core.annotation.HttpLog;
+import io.github.easyretrofit.extension.httplog.core.annotation.RetrofitHttpLog;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
@@ -22,10 +22,10 @@ public class HttpLogInterceptor extends BaseInterceptor {
 
     @Override
     protected Response executeIntercept(Chain chain) throws IOException {
-        Annotation extensionAnnotation = this.getExtensionAnnotation(HttpLog.class);
+        Annotation extensionAnnotation = this.getExtensionAnnotation(RetrofitHttpLog.class);
         if (extensionAnnotation != null) {
-            HttpLog httpLog = (HttpLog) extensionAnnotation;
-            httpLoggingInterceptor.setLevel(httpLog.level());
+            RetrofitHttpLog retrofitHttpLog = (RetrofitHttpLog) extensionAnnotation;
+            httpLoggingInterceptor.setLevel(retrofitHttpLog.level());
         }
         return httpLoggingInterceptor.intercept(chain);
     }

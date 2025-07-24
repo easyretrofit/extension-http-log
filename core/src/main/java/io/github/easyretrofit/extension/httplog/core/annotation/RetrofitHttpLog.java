@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @RetrofitInterceptor(handler = HttpLogInterceptor.class)
-public @interface HttpLog {
+public @interface RetrofitHttpLog {
 
     HttpLoggingInterceptor.Level level() default HttpLoggingInterceptor.Level.BASIC;
 

@@ -8,6 +8,16 @@
 
 ## How to use in Spring Boot
 
+add dependency in pom.xml
+```xml
+
+<dependency>
+    <groupId>io.github.easyretrofit</groupId>
+    <artifactId>extension-http-log-spring-boot-starter</artifactId>
+    <version>${latest.version}</version>
+</dependency>
+```
+
 please look at spring boot web starter [example](https://github.com/liuziyuan/easy-retrofit-demo/tree/main/retrofit-spring-boot-web-starter-sample)
 
 ```java
